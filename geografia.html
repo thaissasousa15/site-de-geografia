@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Geografia: Continentes do Mundo e Mais</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ff;
+      color: #333;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+
+    header p {
+      margin: 5px 0 0;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .continentes, .assuntos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+    }
+
+    .btn-info {
+      margin: 0 0 12px 0;
+      padding: 8px 15px;
+      font-size: 0.9em;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      display: inline-block;
+    }
+
+    .btn-info:hover {
+      background-color: #45a049;
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      flex-grow: 1;
+    }
+
+    #infoDetalhada {
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-top: 20px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      display: none;
+      text-align: left;
+    }
+
+    #infoDetalhada img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-top: 15px;
+    }
+
+    button#curiosidadeBtn {
+      display: block;
+      margin: 30px auto 10px;
+      padding: 10px 20px;
+      font-size: 1em;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button#curiosidadeBtn:hover {
+      background-color: #45a049;
+    }
+
+    #curiosidade {
+      max-width: 600px;
+      margin: 0 auto 30px;
+      font-size: 1.1em;
+      text-align: center;
+      min-height: 40px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px 0;
+      background-color: #4CAF50;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Geografia: Continentes do Mundo e Mais</h1>
+    <p>Explore os continentes, climas, rios, montanhas e biomas do planeta!</p>
+  </header>
+
+  <main>
+    <section class="continentes">
+      <div class="card" data-key="america">
+        <h3>América</h3>
+        <button class="btn-info">Ver mais</button>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/America_continent_map.svg" alt="América" />
+        <p>A América é formada por América do Norte e América do Sul, abrigando diversas culturas e ecossistemas.</p>
+      </div>
+
+      <div class="card" data-key="africa">
+        <h3>África</h3>
+        <button class="btn-info">Ver mais</button>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Africa_continent_map.svg" alt="África" />
+        <p>A África possui o maior deserto quente do mundo (Sahara) e grande diversidade de fauna e flora.</p>
+      </div>
+
+      <div class="card" data-key="asia">
+        <h3>Ásia</h3>
+        <button class="btn-info">Ver mais</button>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Asia_continent_map.svg" alt="Ásia" />
+        <p>A Ásia é o continente mais populoso e abriga os maiores países em área, como Rússia e China.</p>
+      </div>
+
+      <div class="card" data-key="europa">
+        <h3>Europa</h3>
+        <button class="btn-info">Ver mais</button>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bd/Europe_continent_map.svg" alt="Europa" />
+        <p>Conhecida por sua história, a Europa possui países com grande diversidade cultural e econômica.</p>
+      </div>
+
+      <div class="card" data-key="oceania">
+        <h3>Oceania</h3>
+        <button class="btn-info">Ver mais</button>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Oceania_%28orthographic_projection%29.svg" alt="Oceania" />
+        <p>Composta por milhares de ilhas no Pacífico, incluindo a Austrália e Nova Zelândia.</p>
+      </div>
+
+      <div class="card" data-key="antartida">
+        <h3>Antártida</h3>
+        <button class="btn-info">Ver mais</button>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Antarctica_%28orthographic_projection%29.svg" alt="Antártida" />
+        <p>Contém 90% do gelo do planeta. Quase desabitada, exceto por cientistas.</p>
+      </div>
+    </section>
+
+    <section class="assuntos">
+      <div class="card" data-key="climas">
+        <h3>Climas do Mundo</h3>
+        <button class="btn-info">Ver mais</button>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Koppen-Geiger_Map.svg" alt="Mapa de climas" />
+        <p>Conheça os principais tipos de clima que influenciam o planeta Terra.</p>
+      </div>
+
+      <div class="card" data-key="rios">
+        <h3>Principais Rios</h3>
+        <button class="btn-info">Ver mais</button>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/World_Rivers_Map.svg" alt="Mapa de rios" />
+        <p>Descubra os rios mais extensos e importantes para os ecossistemas e povos.</p>
+      </div>
+
+      <div class="card" data-key="montanhas">
+        <h3>Montanhas Famosas</h3>
+        <button class="btn-info">Ver mais</button>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/Montanhas_do_mundo_map.svg" alt="Montanhas" />
+        <p>Conheça as montanhas mais altas e icônicas do planeta.</p>
+      </div>
+
+      <div class="card" data-key="biomas">
+        <h3>Biomas</h3>
+        <button class="btn-info">Ver mais</button>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/World_Biomes_Map.svg" alt="Mapa de biomas" />
+        <p>Explore os biomas que abrigam diferentes espécies e ambientes naturais.</p>
+      </div>
+    </section>
+
+    <div id="infoDetalhada"></div>
+
+    <button id="curiosidadeBtn">Mostrar Curiosidade Geográfica</button>
+    <p id="curiosidade"></p>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Geografia Educativa</p>
+  </footer>
+
+  <script>
+    const dados = {
+      america: {
+        nome: "América",
+        descricao: "Dividida em América do Norte, Central e do Sul, com paisagens variadas e diversidade cultural.",
+        populacao: "1 bilhão de pessoas",
+        paises: "35 países",
+        curiosidade: "Vai do Ártico até quase a Antártida.",
+        imagem: "https://upload.wikimedia.org/wikipedia/commons/1/11/Americas_orthographic.svg"
+      },
+      africa: {
+        nome: "África",
+        descricao: "A África possui o maior deserto quente do mundo (Sahara) e grande diversidade de fauna e flora.",
+        populacao: "1,4 bilhão de pessoas",
+        paises: "54 países",
+        curiosidade: "É o berço da humanidade. Os fósseis mais antigos foram encontrados lá.",
+        imagem: "https://upload.wikimedia.org/wikipedia/commons/8/86/Africa_%28orthographic_projection%29.svg"
+      },
+      asia: {
+        nome: "Ásia",
+        descricao: "O maior e mais populoso continente. Berço de civilizações como China, Índia e Japão.",
+        populacao: "4,7 bilhões",
+        paises: "49 países",
+        curiosidade: "Lar do Monte Everest e do Mar Morto.",
+        imagem: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Asia_orthographic.svg"
+      },
+      europa: {
+        nome: "Europa",
+        descricao: "Pequena em tamanho, mas enorme em influência histórica, cultural e política.",
+        populacao: "750 milhões",
+        paises: "44 países",
+        curiosidade: "Muitos países usam o Euro como moeda.",
+        imagem: "https://upload.wikimedia.org/wikipedia/commons/b/b6/Europe_orthographic.svg"
+      },
+      oceania: {
+        nome: "Oceania",
+        descricao: "Composta por milhares de ilhas no Pacífico, incluindo a Austrália e Nova Zelândia.",
+        populacao: "42 milhões",
+        paises: "16 países",
+        curiosidade: "Abriga a Grande Barreira de Coral.",
+        imagem: "https://upload.wikimedia.org/wikipedia/commons/0/01/Oceania_%28orthographic_projection%29.svg"
+      },
+      antartida: {
+        nome: "Antártida",
+        descricao: "Contém 90% do gelo do planeta. Quase desabitada, exceto por cientistas.",
+        populacao: "1.000 cientistas (temporários)",
+        paises: "0 (território internacional)",
+        curiosidade: "Não tem vegetação permanente.",
+        imagem: "https://upload.wikimedia.org/wikipedia/commons/3/35/Antarctica_%28orthographic_projection%29.svg"
+      },
+      climas: {
+        nome: "Climas do Mundo",
+        descricao: "Os principais tipos de clima do planeta incluem tropical, temperado, polar, desértico e mediterrâneo.",
+        curiosidade: "O clima influencia diretamente a fauna, flora e modos de vida humanos.",
+        imagem: "https://upload.wikimedia.org/wikipedia/commons/1/1f/Koppen-Geiger_Map.svg"
+      },
+      rios: {
+        nome: "Principais Rios",
+        descricao: "Rios como Amazonas, Nilo e Yangtzé são cruciais para a biodiversidade e civilizações.",
+        curiosidade: "O Rio Amazonas é o mais volumoso do mundo em água.",
+        imagem: "https://upload.wikimedia.org/wikipedia/commons/8/89/World_Rivers_Map.svg"
+      },
+      montanhas: {
+        nome: "Montanhas Famosas",
+        descricao: "Montanhas como Everest, K2 e Aconcágua são ícones da geografia e desafios para alpinistas.",
+        curiosidade: "O Monte Everest tem 8.848 metros de altura.",
+        imagem: "https://upload.wikimedia.org/wikipedia/commons/9/98/Montanhas_do_mundo_map.svg"
+      },
+      biomas: {
+        nome: "Biomas",
+        descricao: "Biomas como floresta tropical, savana, tundra e desertos representam diferentes ecossistemas.",
+        curiosidade: "O bioma amazônico é o mais biodiverso do planeta.",
+        imagem: "https://upload.wikimedia.org/wikipedia/commons/6/6d/World_Biomes_Map.svg"
+      }
+    };
+
+    const curiosidades = [
+      "O Deserto do Saara na África é maior que o território da França!",
+      "A Rússia é o maior país do mundo em área, cobrindo dois continentes: Europa e Ásia.",
+      "A Amazônia é a maior floresta tropical do mundo e abriga milhões de espécies de animais e plantas.",
+      "O Monte Everest, na Ásia, é a montanha mais alta do planeta, com 8.848 metros de altitude.",
+      "A Grande Barreira de Coral, na Oceania, é o maior sistema de recifes de coral do mundo.",
+      "A Antártida é o continente mais frio e seco do planeta.",
+      "A Europa possui mais de 200 línguas diferentes faladas em seu território.",
+      "A América do Sul abriga a Cordilheira dos Andes, a mais longa cadeia de montanhas continentais.",
+      "O Rio Amazonas libera cerca de 20% da água doce que deságua nos oceanos do mundo.",
+      "O clima mediterrâneo é caracterizado por verões quentes e secos e invernos amenos e úmidos."
+    ];
+
+    const infoDetalhada = document.getElementById("infoDetalhada");
+
+    function mostrarInfo(key) {
+      const c = dados[key];
+      if (!c) return;
+
+      infoDetalhada.style.display = "block";
+      infoDetalhada.innerHTML = `
+        <h2>${c.nome}</h2>
+        <p><strong>Descrição:</strong> ${c.descricao}</p>
+        ${c.populacao ? `<p><strong>População:</strong> ${c.populacao}</p>` : ""}
+        ${c.paises ? `<p><strong>Número de países:</strong> ${c.paises}</p>` : ""}
+        <p><strong>Curiosidade:</strong> ${c.curiosidade}</p>
+        <img src="${c.imagem}" alt="Mapa de ${c.nome}" />
+      `;
+      infoDetalhada.scrollIntoView({ behavior: "smooth" });
+    }
+
+    document.querySelectorAll(".btn-info").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const key = btn.parentElement.getAttribute("data-key");
+        mostrarInfo(key);
+      });
+    });
+
+    const btnCuriosidade = document.getElementById("curiosidadeBtn");
+    const displayCuriosidade = document.getElementById("curiosidade");
+
+    btnCuriosidade.addEventListener("click", () => {
+      const randomIndex = Math.floor(Math.random() * curiosidades.length);
+      displayCuriosidade.textContent = curiosidades[randomIndex];
+      displayCuriosidade.scrollIntoView({ behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
